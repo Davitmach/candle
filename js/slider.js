@@ -1,4 +1,4 @@
-
+console.log(1);
 async function Get_slider_info() {
   try {
     var Slider_counter = 0;
