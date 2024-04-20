@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.Main_container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Left_bar {
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 30px 150px 0 30px;
+        background-color: #212b36;
+        gap: 40px;
+
+        .Menu_box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            ul {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 30px;
+                list-style: none;
+
+                li {
+                    transition: .4s;
+
+                    .Anim_box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &:hover {
+                        color: #ffffff;
+                    }
+
+                    &:hover i {
+                        color: #ffffff;
+                    }
+
+                    &:hover a {
+                        color: #ffffff;
+                    }
+
+                    i {
+                        color: #ffffff80;
+                        transition: .4s;
+                        font-size: 14px;
+                    }
+
+                    a {
+                        color: #ffffff80;
+                        text-decoration: none;
+                        font-weight: 500;
+                        transition: .4s;
+                        cursor: pointer;
+                    }
+
+                    color: #ffffff80;
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: .4s;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+
+    .Admin_panel {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .Title_container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0;
+            background-color: #624bff;
+
+            h1 {
+                color: #ffffff;
+            }
+        }
+
+        .Add_product {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 50px 0;
+
+            .Inputs_box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                form {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    input {
+                        border-radius: 5px;
+                        outline: none;
+                        outline-width: 1px;
+                        border: 3px solid #624bff;
+                        transition: .4s;
+                        padding: 20px 10px;
+
+                        &::placeholder {
+                            color: #624bff;
+                            font-weight: 500;
+                            font-size: 20px;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        }
+
+                        &:focus {
+                            box-shadow: 0px 2px 9px #624bff;
+                        }
+                    }
+
+                    button {
+                        border-radius: 5px;
+                        outline: none;
+                        outline-width: 1px;
+                        border: 3px solid #624bff;
+                        transition: .4s;
+                        padding: 20px 50px;
+                        background-color: #624bff;
+                        color: #ffffff;
+                        font-size: 15px;
+                        font-weight: 700;
+                        cursor: pointer;
+
+
+
+
+                        &:hover {
+                            box-shadow: 0px 2px 9px #624bff;
+                            background-color: #ffffff;
+                            color: #624bff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Products {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            table {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                tbody {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    tr {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        border: 3px solid #624bff;
+                        padding: 30px 0;
+
+                        td {
+                            width: 130px;
+                            height: 130px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            color: #624bff;
+overflow: hidden;
+                            gap: 20px;
+
+                            button {
+                                background: none;
+                                border: 3px solid #624bff;
+                                border-radius: 5px;
+                                width: 80%;
+                                padding: 10px 0;
+                                cursor: pointer;
+                                color: #624bff;
+                                font-weight: 400;
+                                font-size: 16px;
+                                transition: .4s;
+
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                        }
+                    }
+
+                }
+            }
+        }
+
+        #Edit_form {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px 0;
+
+            input {
+                width: 30%;
+                border-radius: 5px;
+                padding: 10px 5px;
+                border: 3px solid #624bff;
+                outline: none;
+                transition: .4s;
+                font-size: 20px;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+
+            button {
+                width: 30%;
+                padding: 20px 0;
+                background: none;
+                outline: none;
+                border: 3px solid #624bff;
+                border-radius: 5px;
+                font-size: 30px;
+                color: #212b36;
+                cursor: pointer;
+                transition: .4s;
+
+                &:hover {
+                    background-color: #624bff;
+                    color: white;
+                }
+            }
+
+            .Img_box {
+                overflow: hidden;
+
+                &:hover img {
+                    transform: scale(1.3);
+                }
+
+                img {
+                    transition: .4s;
+                    border-radius: 50%;
+                }
+
+            }
+        }
+    }
+
+}
