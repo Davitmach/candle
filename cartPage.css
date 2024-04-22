@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+}
+@keyframes Header {
+  from {
+    top: -200px;
+    height: 150px;
+  }
+  to {
+    top: 0;
+    height: 80px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+}
+header .Menu_box {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box {
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    background-color: white;
+    left: 0;
+    padding: 0 30px;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+header .Menu_box ul {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+}
+header .Menu_box ul > li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+header .Menu_box ul > li #Low_res_btn {
+  display: none;
+  transition: 0.4s;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+header .Menu_box ul > li #Low_res_btn i {
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box ul > li #Low_res_btn {
+    display: flex;
+  }
+}
+header .Menu_box ul > li > a {
+  text-decoration: none;
+  color: #303030;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  header .Menu_box ul > li > a {
+    font-size: 15px;
+  }
+}
+header .Menu_box ul > li > a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: black;
+  transition: 0.4s;
+  bottom: -2px;
+}
+header .Menu_box ul > li > a:hover::before {
+  width: 100%;
+}
+header .Menu_box ul li {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  header .Menu_box ul li:hover > ul {
+    display: flex;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box ul li ul {
+    width: 225px;
+    height: 0;
+    background-color: transparent;
+    gap: 5px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    transition: 0.4s;
+  }
+}
+@media (min-width: 1024px) {
+  header .Menu_box ul li ul {
+    width: 225px;
+    height: auto;
+    display: none;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    gap: 30px;
+    padding: 20px;
+    background-color: black;
+    transition: 0.4s;
+  }
+}
+header .Menu_box ul li ul a {
+  color: #c6c6c6;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.4s;
+}
+@media (min-width: 1024px) {
+  header .Menu_box ul li ul a:hover {
+    color: white;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box ul li ul a {
+    color: black;
+  }
+}
+header .Menu_box ul li ul a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: white;
+  transition: 0.4s;
+  bottom: -5px;
+}
+header .Menu_box ul li ul a:hover::before {
+  width: 100%;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .Menu_box ul li .Low_res_active {
+    height: 100px;
+  }
+}
+header .Logo_box {
+  transition: 0.4s;
+}
+header .Logo_box:hover {
+  transform: scale(1.1);
+}
+header .User_info_container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header .User_info_container {
+    display: none;
+  }
+}
+header .User_info_container .Cart_box {
+  height: 100%;
+  position: relative;
+}
+header .User_info_container .Cart_box:hover #Cart_items_box {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+header .User_info_container .Cart_box #Cart_items_box {
+  width: 280px;
+  height: auto;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #3d3d3d;
+  padding: 5px 0;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box .Info_box {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box img {
+  width: 70px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box span {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: white;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box h2 {
+  color: #707070;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+header .User_info_container .Cart_box #Cart_items_box #Product_list .Product_box h2:hover {
+  color: white;
+}
+header .User_info_container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+header .User_info_container > div i,
+header .User_info_container > div svg {
+  color: black;
+  font-size: 13px;
+}
+header .User_info_container > div #Cart_counter,
+header .User_info_container > div #Like_counter {
+  color: #000;
+  font-size: 12px;
+}
+header .User_info_container #Cart_items_box {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 150px;
+  background-color: #262626;
+  width: 280px;
+  padding: 20px;
+  gap: 10px;
+  z-index: 3;
+}
+header .User_info_container #Cart_items_box span {
+  width: 100%;
+  float: none;
+  padding: 7px 0;
+  line-height: 20px;
+  color: #9d9d9d;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+header .User_info_container #Cart_items_box #Total_money {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .User_info_container #Cart_items_box #Total_money h1 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fff;
+}
+header .User_info_container #Cart_items_box #Total_money span {
+  color: #c2c2c2;
+  font-size: 15px;
+}
+header .User_info_container #Cart_items_box .Button_box {
+  width: 100%;
+  background-color: white;
+}
+header .User_info_container #Cart_items_box .Button_box button {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.4s;
+}
+header .User_info_container #Cart_items_box .Button_box button:hover {
+  background-color: #3d3d3d;
+  color: white;
+}
+header #Menu_btn_box {
+  display: none;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  header #Menu_btn_box {
+    display: flex;
+  }
+}/*# sourceMappingURL=cartPage.css.map */

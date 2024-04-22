@@ -7,6 +7,10 @@
   font-family: "Work Sans";
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 header {
   width: 100%;
   height: 150px;
@@ -70,15 +74,6 @@ header .Menu_box ul {
     gap: 20px;
     align-items: start;
   }
-}
-header .Menu_box ul > li > #Home::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: black;
-  transition: 0.4s;
-  bottom: -2px;
 }
 header .Menu_box ul > li {
   width: 100%;
@@ -367,366 +362,235 @@ header #Menu_btn_box {
   }
 }
 
-.Slider_container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-.Slider_container .Navigation_box {
+.Path_container {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  position: absolute;
-  z-index: 2;
-}
-.Slider_container .Navigation_box > div {
+  justify-content: flex-start;
+  padding: 100px 300px;
+  background-color: #fbf9f9;
   transition: 0.4s;
 }
-.Slider_container .Navigation_box > div i {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+@media (max-height: 722px) {
+  .Path_container {
+    padding: 50px 300px;
+  }
 }
-.Slider_container .Navigation_box > div:first-child:hover {
-  transform: translateX(-10px) rotate(-360deg);
+@media (max-height: 538px) {
+  .Path_container {
+    padding: 20px 300px;
+  }
 }
-.Slider_container .Navigation_box > div:last-child:hover {
-  transform: translateX(10px) rotate(360deg);
+@media (min-width: 320px) and (max-width: 600px) {
+  .Path_container {
+    padding: 20px 100px;
+  }
 }
-.Slider_container #Slider_page {
+.Path_container h1 {
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#Liked_container {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 50px;
 }
-.Slider_container #Slider_page .Slide {
+@media (min-width: 320px) and (max-width: 1707px) {
+  #Liked_container {
+    padding: 50px 20px;
+  }
+}
+#Liked_container table {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Slider_container #Slider_page .Slide .Background_box {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-}
-.Slider_container #Slider_page .Slide .Background_box .Background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-@keyframes Hide {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-}
-@keyframes Visible {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.Slider_container #Slider_page .Slide .Info_box {
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 30px;
-  position: absolute;
-  z-index: 2;
-}
-.Slider_container #Slider_page .Slide .Info_box .Title_box {
+#Liked_container table tbody {
   width: auto;
   height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Slider_container #Slider_page .Slide .Info_box .Title_box h1 {
-  color: rgb(255, 255, 255);
-  letter-spacing: 65px;
-  font-weight: 500;
-  font-size: 130px;
-  transition: 0.4s;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .Slider_container #Slider_page .Slide .Info_box .Title_box h1 {
-    font-size: 100px;
-  }
-}
-@media (min-width: 552px) and (max-width: 768px) {
-  .Slider_container #Slider_page .Slide .Info_box .Title_box h1 {
-    font-size: 50px;
-  }
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Slider_container #Slider_page .Slide .Info_box .Title_box h1 {
-    font-size: 30px;
-    letter-spacing: 20px;
-  }
-}
-.Slider_container #Slider_page .Slide .Info_box .Title_box h1:hover {
-  transform: scale(1.1);
-}
-.Slider_container #Slider_page .Slide .Info_box .Button_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: 30px;
-  transition: 0.4s;
 }
-@media (min-width: 320px) and (max-width: 1024px) {
-  .Slider_container #Slider_page .Slide .Info_box .Button_box {
+@media (min-width: 320px) and (max-width: 416px) {
+  #Liked_container table tbody {
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+#Liked_container table tbody > tr:first-child {
+  border: none;
+  border-top: 1px solid #e0dede;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 320px) and (max-width: 416px) {
+  #Liked_container table tbody > tr:first-child {
+    height: 100vh;
+    justify-content: space-evenly;
+  }
+}
+#Liked_container table tbody tr {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: 1px solid #e0dede;
+}
+@media (min-width: 320px) and (max-width: 416px) {
+  #Liked_container table tbody tr {
     flex-direction: column;
-    transform: translateY(70%);
-  }
-  .Slider_container #Slider_page .Slide .Info_box .Button_box:hover {
-    transform: scale(1.1) translateY(70%);
+    align-items: center;
+    justify-content: space-between;
   }
 }
-@media (min-width: 1024px) {
-  .Slider_container #Slider_page .Slide .Info_box .Button_box:hover {
-    transform: scale(1.1);
-  }
-}
-.Slider_container #Slider_page .Slide .Info_box .Button_box .Btn1 {
-  font-family: "Work Sans", sans-serif;
-  border: 1px solid white;
-  font-size: 12px;
-  height: 46px;
-  font-style: normal;
-  font-weight: 600;
-  background-color: white;
-  padding: 0 60px;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.Slider_container #Slider_page .Slide .Info_box .Button_box .Btn1:hover {
-  background-color: transparent;
-  color: white;
-}
-.Slider_container #Slider_page .Slide .Info_box .Button_box .Btn2 {
-  font-family: "Work Sans", sans-serif;
-  border: 1px solid black;
-  font-size: 12px;
-  line-height: 46px;
-  height: 46px;
-  font-style: normal;
-  font-weight: 600;
-  background-color: black;
-  padding: 0 60px;
-  color: white;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.Slider_container #Slider_page .Slide .Info_box .Button_box .Btn2:hover {
-  background-color: transparent;
-  color: black;
-}
-.Slider_container .Pagination_box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  position: absolute;
-  z-index: 1;
-  gap: 20px;
-  padding: 20px 0;
-}
-.Slider_container .Pagination_box .Active {
-  font-weight: 600;
-  font-size: 20px;
-  color: #ffffff;
-  position: relative;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.Slider_container .Pagination_box .Active::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: white;
-  bottom: 0;
-  right: 0;
-  transition: 0.4s;
-}
-.Slider_container .Pagination_box .Disable {
-  font-weight: 600;
-  font-size: 15px;
-  color: #ffffff;
-  position: relative;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.Slider_container .Pagination_box .Disable:hover::before {
-  width: 100%;
-}
-.Slider_container .Pagination_box .Disable::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  right: 0;
-  background-color: white;
-  bottom: 0;
-  transition: 0.4s;
-}
-
-.Perfume_container {
-  width: 100%;
-  height: auto;
+#Liked_container table tbody tr td {
+  width: 500px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 100px 0;
-}
-.Perfume_container .Info_box {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-}
-.Perfume_container .Info_box span {
-  color: #000000;
-  font-size: 12px;
-  line-height: 24px;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-.Perfume_container .Info_box p {
-  color: #000000;
-  font-size: 34px;
-  line-height: 42px;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.Perfume_container .Perfumes {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  transition: 0.4s;
   flex-wrap: wrap;
-  padding: 50px 100px;
 }
-.Perfume_container .Perfumes .Perfume_box {
-  width: 275px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  cursor: pointer;
+@media (min-width: 320px) and (max-width: 1639px) {
+  #Liked_container table tbody tr td {
+    width: 300px;
+    height: auto;
+    padding: 10px 0;
+  }
 }
-.Perfume_container .Perfumes .Perfume_box:hover img {
-  opacity: 0.7;
+@media (min-width: 320px) and (max-width: 1267px) {
+  #Liked_container table tbody tr td {
+    width: 200px;
+  }
 }
-.Perfume_container .Perfumes .Perfume_box:hover .Img_container .Product_action {
-  transform: translateY(-10px);
+@media (min-width: 320px) and (max-width: 806px) {
+  #Liked_container table tbody tr td {
+    width: 150px;
+  }
 }
-.Perfume_container .Perfumes .Perfume_box .Info_box h1 {
-  color: #000000;
-  font-family: "Work Sans", sans-serif;
-  font-size: 18px;
-  line-height: 22px;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 3.7px;
+@media (min-width: 320px) and (max-width: 608px) {
+  #Liked_container table tbody tr td {
+    width: 100px;
+  }
+}
+#Liked_container table tbody tr td h3 {
+  font-family: "Work sans", sans-serif;
   text-transform: uppercase;
-}
-.Perfume_container .Perfumes .Perfume_box .Info_box p {
-  color: #707070;
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: 0;
-}
-.Perfume_container .Perfumes .Perfume_box .Add_to_cart {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Perfume_container .Perfumes .Perfume_box .Add_to_cart button {
-  border: 1px solid #000;
-  width: 100%;
-  background: black;
-  padding: 15px 0;
-  cursor: pointer;
-  color: white;
-  font-size: 15px;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 0.2em;
   font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 881px) {
+  #Liked_container table tbody tr td h3 {
+    font-size: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 413px) {
+  #Liked_container table tbody tr td h3 {
+    font-size: 18px;
+  }
+}
+#Liked_container table tbody tr td #Open_mini_product_btn {
+  height: auto;
+  background-color: black;
+  border: 1px solid black;
+  color: #888;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  white-space: nowrap;
   transition: 0.4s;
+  cursor: pointer;
 }
-.Perfume_container .Perfumes .Perfume_box .Add_to_cart button:hover {
-  color: black;
-  background: transparent;
+@media (min-width: 320px) and (max-width: 822px) {
+  #Liked_container table tbody tr td #Open_mini_product_btn {
+    padding: 15px 10px;
+  }
 }
-.Perfume_container .Perfumes .Perfume_box .Img_container {
-  width: 100%;
-  height: 258px;
+@media (min-width: 320px) and (max-width: 656px) {
+  #Liked_container table tbody tr td #Open_mini_product_btn {
+    transform: scale(0.8);
+  }
+}
+#Liked_container table tbody tr td h2 {
+  font-family: "Work sans", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+}
+#Liked_container table tbody tr td div {
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
 }
-.Perfume_container .Perfumes .Perfume_box .Img_container .Img_box {
-  width: 100%;
-  height: 100%;
-}
-.Perfume_container .Perfumes .Perfume_box .Img_container .Img_box img {
-  width: 100%;
-  height: 100%;
+#Liked_container table tbody tr td img {
+  width: 66px;
+  height: 88px;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: 0.4s;
 }
-.Perfume_container .Perfumes .Perfume_box .Img_container .Product_action {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  bottom: 0;
-  transform: translateY(50px);
-  transition: 0.4s;
+#Liked_container table tbody tr td h1 {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
 }
-.Perfume_container .Perfumes .Perfume_box .Img_container .Product_action > div {
+@media (min-width: 320px) and (max-width: 770px) {
+  #Liked_container table tbody tr td h1 {
+    text-align: center;
+  }
+}
+#Liked_container table tbody tr td #Add_cart_btn {
+  color: #ffffff;
+  font-size: 12px;
+  height: 44px;
+  text-transform: uppercase;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background-color: #000000;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 0 30px;
   cursor: pointer;
-  font-size: 25px;
-  font-weight: 100;
 }
-.Perfume_container .Perfumes .Perfume_box .Img_container .Product_action svg {
-  width: 30px;
-  height: 30px;
-}/*# sourceMappingURL=home.css.map */
+@media (min-width: 320px) and (max-width: 973px) {
+  #Liked_container table tbody tr td #Add_cart_btn {
+    padding: 0 5px;
+  }
+}
+@media (min-width: 320px) and (max-width: 668px) {
+  #Liked_container table tbody tr td #Add_cart_btn {
+    padding: 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+#Liked_container table tbody tr td i {
+  cursor: pointer;
+}/*# sourceMappingURL=likePage.css.map */

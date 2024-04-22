@@ -11,21 +11,25 @@ Title_box.innerHTML = '<h1>Products</h1>'
 var Product = document.getElementById('Products')
 var Like = document.getElementById('Like')
 var Cart = document.getElementById('Cart')
-
+var Interval;
 Product.addEventListener('click', () => {
     Title_box.innerHTML = ''
     Title_box.innerHTML = '<h1>Products</h1>'
-    console.log('Product');
+    Products();
+
 })
 Like.addEventListener('click', () => {
     Title_box.innerHTML = ''
     Title_box.innerHTML = '<h1>Like</h1>'
+    Liked();
 })
 Cart.addEventListener('click', () => {
     Title_box.innerHTML = ''
     Title_box.innerHTML = '<h1>Cart</h1>'
 })
+
 function Products() {
+    clearInterval(Interval)
     Container.innerHTML = '';
 
     var Product_container = document.createElement('div')
@@ -53,34 +57,122 @@ function Products() {
     var Products_table = document.createElement('table');
     Products.append(Products_table);
 
-}
-Products()
+    var Form = document.querySelector('form');
+    var Btn = document.querySelector('#Submit_btn');
+    var info = document.getElementById('Info_container');
+    var Products = document.querySelector('.Products >table');
 
-Like.addEventListener('click',()=> {
-    Liked();
-})
+
+    Btn.addEventListener('click', () => {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://candle.ua/admin/addProduct.php', true);
+        xhr.onload = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    let data = xhr.response;
+
+
+                }
+            }
+        };
+
+        let formData = new FormData(Form);
+
+        xhr.send(formData);
+
+    })
+
+
+    Interval = setInterval(() => {
+        var xhr2 = new XMLHttpRequest();
+        xhr2.open('POST', 'http://candle.ua/admin/getProduct.php', true);
+        xhr2.onload = () => {
+            if (xhr2.readyState === XMLHttpRequest.DONE) {
+                if (xhr2.status === 200) {
+                    let data = xhr2.response;
+                    Products.innerHTML = data;
+
+                    var Td = Products.querySelectorAll('td');
+                    Td.forEach(element => {
+                        if (element.innerText.length > 14 && element.innerText !== `Delete
+          Edit` ) {
+                            element.innerText = element.innerText.substring(0, 10) + '...'
+
+                        }
+                    });
+
+
+
+
+                    if (data !== '<tr><td>ID</td><td>IMG</td><td>NAME</td><td>TAGS</td><td>DESCRIPTION</td><td>PRICE</td><td>ACTIONS</td></tr>') {
+                        var Delete_btn = document.querySelectorAll('#Delete_btn');
+                        var Edit_btn = document.querySelectorAll('#Edit_btn');
+                        for (item of Edit_btn) {
+                            item.addEventListener('click', (Event) => {
+
+
+                                Get_edit_product(Event.target.dataset.idedit)
+                            })
+                        }
+                        for (del of Delete_btn) {
+                            del.addEventListener('click', (Event) => {
+                                var xhr = new XMLHttpRequest();
+                                xhr.open('POST', 'http://candle.ua/admin/deleteProduct.php', true);
+                                xhr.onload = () => {
+                                    if (xhr.readyState === XMLHttpRequest.DONE) {
+
+                                        if (xhr.status === 200) {
+                                            let data = xhr.response;
+
+
+
+                                        }
+                                    }
+                                };
+                                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                xhr.send("id=" + Event.target.dataset.iddel);
+
+                            })
+                        }
+
+                    }
+
+
+                }
+            }
+        };
+
+
+
+        xhr2.send();
+    }, 300);
+
+}
+Products();
 
 function Liked() {
-Container.innerHTML = '';
-setInterval(() => {
-    var xhr9 = new XMLHttpRequest();
-xhr9.open('POST', 'http://candle.ua/product/liked.php', true);
-xhr9.onload = () => {
-    if (xhr9.readyState === XMLHttpRequest.DONE) {
-        if (xhr9.status === 200) {
-            let data = xhr9.response;
-     Container.innerHTML = data;
-           
-        }
-    }
-};
-xhr9.send();
-}, 200);
+    clearInterval(Interval)
+    Container.innerHTML = '';
+    var Like_container = document.createElement('div');
+    Like_container.classList.add('Likes');
+    Container.append(Like_container)
+    var Like_table = document.createElement('table');
 
+    Like_container.append(Like_table);
+    Interval = setInterval(() => {
+        var xhr9 = new XMLHttpRequest();
+        xhr9.open('POST', 'http://candle.ua/admin/liked.php', true);
+        xhr9.onload = () => {
+            if (xhr9.readyState === XMLHttpRequest.DONE) {
+                if (xhr9.status === 200) {
+                    let data = xhr9.response;
+                    Like_table.innerHTML = data;
 
-
-
-
+                }
+            }
+        };
+        xhr9.send();
+    }, 200);
 
 }
 function Get_edit_product(id) {
@@ -105,7 +197,7 @@ function Get_edit_product(id) {
                             if (xhr.status === 200) {
                                 let data = xhr.response;
 
-                                console.log(data);
+
 
                             }
                         }

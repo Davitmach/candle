@@ -6,6 +6,14 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Work Sans';
+    // border: 1px solid red
+
+}
+
+body {
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 }
 
 
@@ -77,18 +85,7 @@ header {
                 align-items: start;
             }
 
-            &>li>#Home {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    height: 1px;
-                    width: 100%;
-                    background-color: black;
-                    transition: .4s;
-                    bottom: -2px;
-                }
-
-            }
+           
 
             &>li {
                 width: 100%;
@@ -358,7 +355,7 @@ header {
                 width: 100%;
                 float: none;
                 padding: 7px 0;
-                
+
                 line-height: 20px;
                 color: #9d9d9d;
                 letter-spacing: 1px;
@@ -420,426 +417,242 @@ header {
     }
 }
 
-.Slider_container {
+.Path_container {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100vh;
+    justify-content: flex-start;
+    padding: 100px 300px;
+    background-color: #fbf9f9;
+    transition: .4s;
 
-    overflow: hidden;
-
-    .Navigation_box {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 30px;
-        position: absolute;
-        z-index: 2;
-
-        &>div {
-            transition: .4s;
-
-            i {
-                font-size: 30px;
-                color: white;
-                cursor: pointer;
-
-            }
-        }
-
-        &>div:first-child:hover {
-            transform: translateX(-10px)rotate(-360deg);
-        }
-
-        &>div:last-child:hover {
-            transform: translateX(10px) rotate(360deg);
-        }
+    @media (max-height:722px) {
+        padding: 50px 300px;
     }
 
-    #Slider_page {
-        width: 100%;
-        height: 100%;
-
-        .Slide {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .Background_box {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                overflow: hidden;
-
-                .Background {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-
-                    @keyframes Hide {
-                        from {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-
-                        to {
-                            opacity: 0;
-                            transform: translateY(30px);
-                        }
-                    }
-
-                    @keyframes Visible {
-                        from {
-                            opacity: 0;
-                            transform: translateY(30px);
-                        }
-
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                }
-            }
-
-            .Info_box {
-                z-index: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 30px;
-                position: absolute;
-                z-index: 2;
-
-                .Title_box {
-                    width: auto;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    h1 {
-                        color: rgb(255, 255, 255);
-                        letter-spacing: 65px;
-                        font-weight: 500;
-                        font-size: 130px;
-                        transition: .4s;
-
-                        @media (min-width:768px) and (max-width:1024px) {
-                            font-size: 100px;
-                        }
-
-                        @media (min-width:552px) and (max-width:768px) {
-                            font-size: 50px;
-                        }
-
-                        @media (min-width:320px) and (max-width:552px) {
-                            font-size: 30px;
-                            letter-spacing: 20px;
-                        }
-
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-
-                .Button_box {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 30px;
-                    transition: .4s;
-
-                    @media (min-width:320px) and (max-width:1024px) {
-                        flex-direction: column;
-                        transform: translateY(70%);
-
-                        &:hover {
-                            transform: scale(1.1) translateY(70%);
-                        }
-                    }
-
-                    @media (min-width:1024px) {
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-                    }
-
-                    .Btn1 {
-                        font-family: 'Work Sans', sans-serif;
-                        border: 1px solid white;
-                        font-size: 12px;
-
-                        height: 46px;
-                        font-style: normal;
-                        font-weight: 600;
-                        background-color: white;
-                        padding: 0 60px;
-                        transition: .4s;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: transparent;
-                            color: white;
-
-                        }
-                    }
-
-                    .Btn2 {
-                        font-family: 'Work Sans', sans-serif;
-                        border: 1px solid black;
-                        font-size: 12px;
-                        line-height: 46px;
-                        height: 46px;
-                        font-style: normal;
-                        font-weight: 600;
-                        background-color: black;
-                        padding: 0 60px;
-                        color: white;
-                        cursor: pointer;
-                        transition: .4s;
-
-                        &:hover {
-                            background-color: transparent;
-                            color: black;
-
-                        }
-                    }
-                }
-            }
-        }
+    @media (max-height:538px) {
+        padding: 20px 300px;
     }
 
-    .Pagination_box {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        position: absolute;
-        z-index: 1;
-        gap: 20px;
-        padding: 20px 0;
+    @media (min-width:320px) and (max-width:600px) {
+        padding: 20px 100px;
+    }
 
-        .Active {
-            font-weight: 600;
-            font-size: 20px;
-            color: #ffffff;
-            position: relative;
-            cursor: pointer;
-            transition: .4s;
-
-            &::before {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                background-color: white;
-                bottom: 0;
-                right: 0;
-                transition: .4s;
-            }
-        }
-
-        .Disable {
-            font-weight: 600;
-            font-size: 15px;
-            color: #ffffff;
-            position: relative;
-            cursor: pointer;
-            transition: .4s;
-
-            &:hover::before {
-                width: 100%;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 0;
-                right: 0;
-                background-color: white;
-                bottom: 0;
-                transition: .4s;
-            }
-        }
+    h1 {
+        font-size: 15px;
+        line-height: 25px;
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 400;
     }
 }
 
-
-
-.Perfume_container {
+#Liked_container {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 100px 0;
+    padding: 50px 50px;
 
-    .Info_box {
+    @media (min-width:320px) and (max-width:1707px) {
+        padding: 50px 20px;
+    }
+
+    table {
         width: 100%;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        gap: 20px;
 
-        span {
-            color: #000000;
-            font-size: 12px;
-            line-height: 24px;
-            font-style: normal;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: #000000;
-            font-size: 34px;
-            line-height: 42px;
-            font-style: normal;
-            font-weight: 600;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-
-    }
-
-    .Perfumes {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 50px 100px;
-
-
-        .Perfume_box {
-            width: 275px;
+        tbody {
+            width: auto;
             height: auto;
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-direction: column;
-            opacity: 0;
-            cursor: pointer;
+            gap: 30px;
 
-            &:hover img {
-                opacity: 0.7;
+            @media (min-width:320px) and (max-width:416px) {
+                flex-direction: row;
+                height: 100vh;
+                width: 100%;
+                overflow-x: scroll;
+
             }
 
-            &:hover .Img_container .Product_action {
-                transform: translateY(-10px);
-            }
 
-            .Info_box {
-                h1 {
-                    color: #000000;
-                    font-family: 'Work Sans', sans-serif;
-                    font-size: 18px;
-                    line-height: 22px;
-                    font-style: normal;
-                    font-weight: 600;
-                    letter-spacing: 3.7px;
-                    text-transform: uppercase;
 
+            &>tr:first-child {
+                border: none;
+                border-top: 1px solid #e0dede;
+                height: 60px;
+                display: flex;
+                align-items: center;
+
+                @media (min-width:320px) and (max-width:416px) {
+
+                    height: 100vh;
+                    justify-content: space-evenly;
                 }
-
-                p {
-                    color: #707070;
-                    font-size: 13px;
-                    letter-spacing: 0;
-                    line-height: 0;
-
-                }
-
-
             }
 
-            .Add_to_cart {
+
+            tr {
+
                 width: 100%;
                 height: auto;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                border: 1px solid #e0dede;
 
-                button {
-                    border: 1px solid #000;
-                    width: 100%;
-                    background: black;
-                    padding: 15px 0;
-                    cursor: pointer;
-                    color: white;
-                    font-size: 15px;
-                    font-weight: 600;
-                    transition: .4s;
-
-                    &:hover {
-                        color: black;
-                        background: transparent;
-                    }
-
-                }
-            }
-
-            .Img_container {
-                width: 100%;
-                height: 258px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-
-                .Img_box {
-                    width: 100%;
-                    height: 100%;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: .4s;
-                    }
+                @media (min-width:320px) and (max-width:416px) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
                 }
 
-                .Product_action {
-                    position: absolute;
+                td {
+                    width: 500px;
+                    height: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    gap: 30px;
-                    bottom: 0;
-                    transform: translateY(50px);
+                    gap: 10px;
                     transition: .4s;
+                    flex-wrap: wrap;
 
-                    &>div {
-
-                        cursor: pointer;
-                        font-size: 25px;
-                        font-weight: 100;
+                    @media (min-width:320px) and (max-width:1639px) {
+                        width: 300px;
+                        height: auto;
+                        padding: 10px 0;
                     }
 
-                    & svg {
-                        width: 30px;
-                        height: 30px;
+                    @media (min-width:320px) and (max-width:1267px) {
+                        width: 200px;
+                    }
+
+                    @media (min-width:320px) and (max-width:806px) {
+                        width: 150px;
+                    }
+
+                    @media (min-width:320px) and (max-width:608px) {
+                        width: 100px;
+                    }
+
+                    h3 {
+                        font-family: "Work sans", sans-serif;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-size: 18px;
+                        letter-spacing: .2em;
+                        font-weight: 600;
+
+                        @media (min-width:320px) and (max-width:881px) {
+                            font-size: 10px;
+                        }
+
+                        @media (min-width:320px) and (max-width:413px) {
+                            font-size: 18px;
+                        }
+                    }
+
+                    #Open_mini_product_btn {
+                        height: auto;
+                        background-color: black;
+                        border: 1px solid black;
+                        color: #888;
+                        font-family: 'Work Sans', sans-serif;
+                        font-size: 12px;
+                        font-weight: 600;
+                        letter-spacing: 2.3px;
+                        text-transform: uppercase;
+                        padding: 15px 25px;
+                        white-space: nowrap;
+                        transition: .4s;
+                        cursor: pointer;
+
+
+                        @media (min-width:320px) and (max-width:822px) {
+                            padding: 15px 10px;
+                        }
+
+                        @media (min-width:320px) and (max-width:656px) {
+                            transform: scale(0.8);
+                        }
+                    }
+
+                    h2 {
+                        font-family: "Work sans", sans-serif;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-size: 15px;
+
+                        font-weight: 400;
+                    }
+
+                    div {
+                        width: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
+
+                    img {
+                        width: 66px;
+                        height: 88px;
+                        object-fit: cover;
+                    }
+
+                    h1 {
+                        color: #888;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-align: left;
+
+                        @media (min-width:320px) and (max-width:770px) {
+                            text-align: center;
+                        }
+                    }
+
+                    #Add_cart_btn {
+                        color: #ffffff;
+                        font-size: 12px;
+
+                        height: 44px;
+                        text-transform: uppercase;
+                        font-family: Work Sans;
+                        font-style: normal;
+                        font-weight: 600;
+                        letter-spacing: 4px;
+                        background-color: #000000;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                        border-color: #000000;
+                        border-width: 1px;
+                        padding: 0 30px;
+                        cursor: pointer;
+
+                        @media (min-width:320px) and (max-width:973px) {
+                            padding: 0 5px;
+
+                        }
+
+                        @media (min-width:320px) and (max-width:668px) {
+                            padding: 0;
+                            font-size: 10px;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    i {
+                        cursor: pointer;
                     }
                 }
+
+
             }
         }
     }

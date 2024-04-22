@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Like Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./home.css">
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./likePage.css">
 </head>
-
 <body>
     <header>
         <div class="Menu_box" id="Menu">
             <ul>
-                <li><a href="" id="Home">HOME</a></li>
+                <li><a href="./home.html" id="Home">HOME</a></li>
                 <li><a href="">PAGES</a>
                     <ul id="Low_res_menu">
                         <li><a href="">About Us</a></li>
@@ -31,7 +29,7 @@
         <div class="Logo_box"><img src="./assets/logo/492-Bridge-logo.png" alt=""></div>
         <div class="User_info_container">
             <div id="Like" class="Like_box">
-                <div><a href="./likePage.html" ><i class="fa-regular fa-heart" ></i></a></div>
+                <div><i class="fa-regular fa-heart" ></i></div>
                 <div id="Like_counter">( 0 )</div>
             </div>
             <div id="Cart" class="Cart_box">
@@ -64,55 +62,27 @@
         <div id="Menu_btn_box"></div>
     </header>
 
-    <div class="Slider_container">
-        <div class="Navigation_box">
-            <div id="Left"><i class="fa-solid fa-chevron-left"></i></div>
-            <div id="Right"><i class="fa-solid fa-chevron-right"></i></div>
-        </div>
-        <div id="Slider_page"></div>
-        <div id="Pagination" class="Pagination_box">
-
-        </div>
+    <div class="Path_container">
+        <h1 id="Path_box">Home > Wishlist</h1>
     </div>
 
-    <div class="Perfume_container">
-        <div class="Info_box">
-            <div><span>CANDLES & DIFFUSERS</span></div>
-            <div>
-                <p>WEEKLY BEST SELLERS</p>
-            </div>
-        </div>
-        <div class="Perfumes" id="Perfumes">
-
-        </div>
+    <div id="Liked_container">
+        <table>
+            <tr>
+                <td>PRODUCT NAME</td>
+                <td>UNIT PRICE</td>
+                <td>STOCK STATUS</td>
+            </tr>
+        </table>
     </div>
-    <!-- NKARNERI BOX  -->
-
-    <!-- OUR FAVOURITES  -->
-
-    <!-- PARALAX  -->
-
-    <!-- BLOG  -->
-
-    <!-- 2 HAT NKAR MEk@ SEV mek@ nkara  -->
-
-    <!-- 2 slider  -->
-
-    <!-- FOOTERI VEREVI NKARNER  -->
-
-    <!-- FOOTER  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
         integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./jquery-3.7.1.min.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/getProduct.js"></script>
     <script src="./js/likeCounter.js"></script>
-    <script src="./js/cartCounter.js"></script>
-    <script src="./js/cartMiniList.js"></script>
-    <script src="./js/totalMoneyCart.js"></script>
-
+    <script src="./js/getLiked.js"></script>
+    <script src="./js/likeHeader.js"></script>
+<script src="./js/cartCounter.js"></script>
+<script src="./js/totalMoneyCart.js"></script>
+<script src="./js/cartMiniList.js"></script>
 </body>
-
 </html>

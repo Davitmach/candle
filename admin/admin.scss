@@ -188,13 +188,13 @@
             }
         }
 
-        .Products {
+        .Products,.Likes {
             width: 100%;
             height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
-
+padding: 10px 0;
             table {
                 width: auto;
                 height: auto;
@@ -224,7 +224,7 @@
                             border-radius: 5px;
                             font-size: 20px;
                             color: #624bff;
-overflow: hidden;
+                            overflow: hidden;
                             gap: 20px;
 
                             button {
