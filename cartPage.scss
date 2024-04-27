@@ -24,9 +24,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     background-color: white;
-    position: absolute;
     z-index: 3;
-
 
     @keyframes Header {
         from {
@@ -85,7 +83,7 @@ header {
                 align-items: start;
             }
 
-        
+
 
             &>li {
                 width: 100%;
@@ -355,7 +353,7 @@ header {
                 width: 100%;
                 float: none;
                 padding: 7px 0;
-                
+
                 line-height: 20px;
                 color: #9d9d9d;
                 letter-spacing: 1px;
@@ -413,6 +411,203 @@ header {
 
         @media (min-width:320px) and (max-width:1024px) {
             display: flex;
+        }
+    }
+}
+
+#Cart_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    #Cart_update_info {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 50px 20%;
+    }
+
+    table {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        tbody {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            flex-direction: column;
+
+            &>tr:first-child {
+
+                width: 100%;
+            }
+
+            tr {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                border-bottom: 1px solid #e6e6e6;
+
+                td {
+                    width: 200px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    @media (min-width:320px) and (max-width:971px) {
+                        width: 150px;
+                    }
+               
+                    @media (min-width:320px) and (max-width:745px) {
+                        width: 100px;
+                    }
+                    @media (min-width:320px) and (max-width:505px) {
+                        width: 70px;
+                        font-size: 10px;
+                    }
+                    @media (min-width:320px) and (max-width:361px) {
+                        width: 50px;
+                     
+                    }
+                    i {
+                        cursor: pointer;
+                    }
+
+                    h1 {
+                        color: #707070;
+                        font-size: 15px;
+                        font-weight: 400;
+                        @media (min-width:320px) and (max-width:505px) {
+                            font-size: 10px;
+                         }
+                       
+                    }
+
+                    h3 {
+                        font-family: "Work sans", sans-serif;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-size: 18px;
+                        line-height: 1.22em;
+                        letter-spacing: .2em;
+                        font-weight: 600;
+
+                        @media (min-width:320px) and (max-width:971px) {
+                            font-size: 14px;
+                            letter-spacing: .1em;
+                        }
+                        @media (min-width:320px) and (max-width:505px) {
+                           font-size: 10px;
+                        }
+                        @media (min-width:320px) and (max-width:361px) {
+                            font-size: 8px;
+                         
+                        }
+                    }
+
+                    img {
+                        width: 66px;
+                        height: 88px;
+                        object-fit: contain;
+                        @media (min-width:320px) and (max-width:505px) {
+                            width: 44px;
+                            height: 66px;
+                         }
+                    }
+
+                    .Counter_box {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        span {
+                            display: block;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 44px;
+                            width: 44px;
+                            border: 1px solid #d8d8d8;
+                            font-size: 17px;
+                            font-family: inherit;
+                            font-weight: 500;
+                            color: #000;
+                            cursor: pointer;
+                            
+                    @media (min-width:320px) and (max-width:971px) {
+                       width: 20px;
+                       height: 20px;
+                    }
+                        }
+
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
+    #Total_money_box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px 20%;
+        gap: 20px;
+
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            h1 {
+                color: #000000;
+                font-size: 34px;
+                line-height: 42px;
+                font-style: normal;
+                font-weight: 600;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+            }
+
+            span {
+                color: #707070;
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            h2 {
+                color: #888;
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            #Total {
+                font-weight: 400;
+                font-size: 1.384615384615385em;
+                letter-spacing: 2px;
+            }
         }
     }
 }

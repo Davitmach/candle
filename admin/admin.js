@@ -24,6 +24,7 @@ Like.addEventListener('click', () => {
     Liked();
 })
 Cart.addEventListener('click', () => {
+    AddCart();
     Title_box.innerHTML = ''
     Title_box.innerHTML = '<h1>Cart</h1>'
 })
@@ -221,4 +222,29 @@ function Get_edit_product(id) {
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send("id=" + id);
 
+}
+
+function AddCart() {
+    clearInterval(Interval)
+    Container.innerHTML = '';
+    var Cart_container = document.createElement('div');
+    Cart_container.classList.add('Add_cart');
+    Container.append(Cart_container)
+    var Cart_table = document.createElement('table');
+
+    Cart_container.append(Cart_table);
+    Interval = setInterval(() => {
+        var xhr9 = new XMLHttpRequest();
+        xhr9.open('POST', 'http://candle.ua/admin/cart.php', true);
+        xhr9.onload = () => {
+            if (xhr9.readyState === XMLHttpRequest.DONE) {
+                if (xhr9.status === 200) {
+                    let data = xhr9.response;
+                    Cart_table.innerHTML = data;
+
+                }
+            }
+        };
+        xhr9.send();
+    }, 200);
 }
