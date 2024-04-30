@@ -74,15 +74,6 @@ header .Menu_box ul {
     align-items: start;
   }
 }
-header .Menu_box ul > li > #Home::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: black;
-  transition: 0.4s;
-  bottom: -2px;
-}
 header .Menu_box ul > li {
   width: 100%;
   height: 100%;
@@ -383,12 +374,24 @@ header #Menu_btn_box {
   justify-content: center;
   padding: 100px 0;
 }
+@media (min-width: 320px) and (max-width: 1288px) {
+  #Product_container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 #Product_container .Img_container {
   width: auto;
   height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 320px) and (max-width: 664px) {
+  #Product_container .Img_container {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 #Product_container .Img_container .Column1 {
   width: auto;
@@ -398,6 +401,19 @@ header #Menu_btn_box {
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
+}
+@media (min-width: 320px) and (max-width: 664px) {
+  #Product_container .Img_container .Column1 {
+    flex-direction: row;
+  }
+  #Product_container .Img_container .Column1 img {
+    transform: translateX(0) !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 496px) {
+  #Product_container .Img_container .Column1 {
+    display: none;
+  }
 }
 #Product_container .Img_container .Column1 .Img {
   width: 154px;
@@ -429,6 +445,12 @@ header #Menu_btn_box {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 320px) and (max-width: 664px) {
+  #Product_container .Img_container #Main_img {
+    height: 311px;
+    width: 100%;
+  }
+}
 #Product_container .Img_container #Main_img img {
   width: 100%;
   height: 100%;
@@ -443,6 +465,11 @@ header #Menu_btn_box {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+}
+@media (min-width: 320px) and (max-width: 664px) {
+  #Product_container .Info_box {
+    padding: 0 10px;
+  }
 }
 #Product_container .Info_box .Title_box h1 {
   font-size: 39px;
@@ -466,6 +493,16 @@ header #Menu_btn_box {
   font-style: normal;
   font-weight: 400;
   width: 630px;
+}
+@media (min-width: 320px) and (max-width: 648px) {
+  #Product_container .Info_box .Description_box p {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 456px) {
+  #Product_container .Info_box .Description_box p {
+    width: 100%;
+  }
 }
 #Product_container .Info_box .Action_box {
   width: auto;
@@ -529,6 +566,9 @@ header #Menu_btn_box {
   justify-content: center;
   gap: 20px;
 }
+#Product_container .Info_box #Like_box i {
+  cursor: pointer;
+}
 #Product_container .Info_box #Like_box .Wishlist {
   color: #000;
   font-weight: 600;
@@ -565,4 +605,125 @@ header #Menu_btn_box {
     left: 0;
     width: 100%;
   }
+}
+
+#Related_products {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px;
+}
+#Related_products .Title_box h1 {
+  color: #000;
+  font-size: 22px;
+  line-height: 27px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 4.4px;
+  text-transform: uppercase;
+}
+#Related_products #Related_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#Related_products #Related_container > div {
+  width: 302px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+#Related_products #Related_container > div:hover .Img_box button {
+  visibility: visible;
+  opacity: 1;
+}
+#Related_products #Related_container > div .Img_box {
+  width: 100%;
+  height: 404px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#Related_products #Related_container > div .Img_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#Related_products #Related_container > div .Img_box button {
+  position: absolute;
+  bottom: 20%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  color: #fff;
+  font-size: 12px;
+  line-height: 44px;
+  height: 44px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background-color: #000;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-color: #000;
+  border-width: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+#Related_products #Related_container > div .Info_box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 10px;
+}
+#Related_products #Related_container > div .Info_box .Title_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#Related_products #Related_container > div .Info_box .Title_box a {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  transition: 0.4s;
+}
+#Related_products #Related_container > div .Info_box .Title_box a:hover {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+#Related_products #Related_container > div .Info_box .Price_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Related_products #Related_container > div .Info_box .Price_box span {
+  color: #353535;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
 }/*# sourceMappingURL=productPage.css.map */

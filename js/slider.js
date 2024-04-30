@@ -195,7 +195,7 @@ var Pagination_data = [];
     })
   }
   catch (error) {
-    console.log(error);
+
   }
 }
 Get_slider_info()

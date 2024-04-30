@@ -9,8 +9,10 @@ xhr8.onload = () => {
             let data = xhr8.response;
             Product_container.innerHTML = '';
             Product_container.innerHTML = data;
-            var Product_box = Product_container.querySelectorAll('.Perfume_box');
-            for(products of Product_box) {
+ 
+            var Title = document.querySelectorAll('#Title_box');
+            
+            for(products of Title) {
                 products.addEventListener('click',(Event)=> {
                     if(Event.target.dataset.id) {
                        location.href = `./productPage.html?id=${Event.target.dataset.id}`
@@ -45,10 +47,11 @@ xhr8.onload = () => {
                 Mini_product_box.style.visibility = 'hidden';
                 Background.style.visibility = 'hidden'
             })
-            var Liked_btn = document.querySelectorAll('#Liked_btn');
+            var Liked_btn = document.querySelectorAll('#Like_box');
+         
             for (liked of Liked_btn) {
                 liked.addEventListener('click', (Event) => {
-
+                 
                     var xhr10 = new XMLHttpRequest();
                     xhr10.open('POST', 'http://candle.ua/product/addLike.php', true);
                     xhr10.onload = () => {
@@ -56,6 +59,18 @@ xhr8.onload = () => {
                             if (xhr10.status === 200) {
                                 let data = xhr10.response;
 
+                                if(data == 'upload') {
+                                    Event.target.classList.remove('fa-regular');
+                                    Event.target.classList.add('fa-solid');
+                                    Event.target.classList.toggle('Liked');
+                                    setTimeout(() => {
+                                        Event.target.classList.remove('Liked');
+                                    }, 800);
+                                } else {
+                                    Event.target.classList.remove('fa-solid');
+                                    Event.target.classList.add('fa-regular');
+                                }
+                                
 
                             }
                         }
@@ -77,7 +92,7 @@ xhr8.onload = () => {
                         if (xhr.readyState === XMLHttpRequest.DONE) {
                             if (xhr.status === 200) {
                                 let data = xhr.response;
-                                console.log(data);
+                             
 
                             }
                         }
@@ -160,7 +175,7 @@ xhr8.onload = () => {
                                 var LiveWidth = window.innerWidth
                                 window.addEventListener('resize', () => {
                                     LiveWidth = window.innerWidth
-                                    console.log(LiveWidth);
+                                  
                                     if ( window.innerWidth < 1000) {
                                         Width = 0;
                                         Slide_counter =1;
@@ -228,7 +243,7 @@ xhr8.onload = () => {
                                         if (xhr2.readyState === XMLHttpRequest.DONE) {
                                             if (xhr2.status === 200) {
                                                 let data = xhr2.response;
-                                                console.log(data);
+                                      
                                             }
                                         }
                                     };
@@ -276,7 +291,7 @@ xhr8.onload = () => {
                                         if (xhr.readyState === XMLHttpRequest.DONE) {
                                             if (xhr.status === 200) {
                                                 let data = xhr.response;
-                                                console.log(data);
+                                          
                                             }
                                         }
                                     };

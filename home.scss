@@ -18,7 +18,7 @@ header {
     justify-content: space-evenly;
     background-color: white;
     position: absolute;
-    z-index: 3;
+    z-index: 5;
 
 
     @keyframes Header {
@@ -53,7 +53,7 @@ header {
             height: 0;
             width: 100%;
             position: absolute;
-            top: 120px;
+            top: 150px;
             background-color: white;
             left: 0;
             padding: 0 30px;
@@ -736,124 +736,305 @@ header {
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 50px 100px;
+        @media (min-width:320px) and (max-width:560px) {
+    padding: 50px 20px;
+    justify-content: center;
+    gap: 102px;
+        }
 
-  
-            .Perfume_box {
-                width: 275px;
+        .Perfume_box {
+            width: 275px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            cursor: pointer;
+
+            &:hover img {
+                opacity: 0.7;
+            }
+
+            &:hover .Img_container .Product_action {
+                transform: translateY(-10px);
+            }
+
+            .Info_box {
+                h1 {
+                    color: #000000;
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    letter-spacing: 3.7px;
+                    text-transform: uppercase;
+
+                }
+
+                p {
+                    color: #707070;
+                    font-size: 13px;
+                    letter-spacing: 0;
+                    line-height: 0;
+
+                }
+
+
+            }
+
+            .Add_to_cart {
+                width: 100%;
                 height: auto;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
-                opacity: 0;
-                cursor: pointer;
 
-                &:hover img {
-                    opacity: 0.7;
-                }
-
-                &:hover .Img_container .Product_action {
-                    transform: translateY(-10px);
-                }
-
-                .Info_box {
-                    h1 {
-                        color: #000000;
-                        font-family: 'Work Sans', sans-serif;
-                        font-size: 18px;
-                        line-height: 22px;
-                        font-style: normal;
-                        font-weight: 600;
-                        letter-spacing: 3.7px;
-                        text-transform: uppercase;
-
-                    }
-
-                    p {
-                        color: #707070;
-                        font-size: 13px;
-                        letter-spacing: 0;
-                        line-height: 0;
-
-                    }
-
-
-                }
-
-                .Add_to_cart {
+                button {
+                    border: 1px solid #000;
                     width: 100%;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    background: black;
+                    padding: 15px 0;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: 600;
+                    transition: .4s;
 
-                    button {
-                        border: 1px solid #000;
-                        width: 100%;
-                        background: black;
-                        padding: 15px 0;
-                        cursor: pointer;
-                        color: white;
-                        font-size: 15px;
-                        font-weight: 600;
-                        transition: .4s;
-
-                        &:hover {
-                            color: black;
-                            background: transparent;
-                        }
-
+                    &:hover {
+                        color: black;
+                        background: transparent;
                     }
+
                 }
+            }
 
-                .Img_container {
+            .Img_container {
+                width: 100%;
+                height: 258px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+
+                .Img_box {
                     width: 100%;
-                    height: 258px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    overflow: hidden;
+                    height: 100%;
 
-                    .Img_box {
+                    img {
                         width: 100%;
                         height: 100%;
+                        object-fit: cover;
+                        transition: .4s;
+                    }
+                }
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            transition: .4s;
-                        }
+                .Product_action {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    bottom: 0;
+                    transform: translateY(50px);
+                    transition: .4s;
+
+                    &>div {
+
+                        cursor: pointer;
+                        font-size: 25px;
+                        font-weight: 100;
                     }
 
-                    .Product_action {
-                        position: absolute;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 30px;
-                        bottom: 0;
-                        transform: translateY(50px);
-                        transition: .4s;
+                    & svg {
+                        width: 30px;
+                        height: 30px;
+                    }
 
-                        &>div {
+                    .Liked {
+                        animation: Liked .4s ease-in-out forwards;
 
-                            cursor: pointer;
-                            font-size: 25px;
-                            font-weight: 100;
-                        }
+                        @keyframes Liked {
+                            0% {
+                                transform: scale(1);
+                            }
 
-                        & svg {
-                            width: 30px;
-                            height: 30px;
+                            50% {
+                                transform: scale(1.2);
+                            }
+
+                            100% {
+                                transform: scale(1);
+                            }
+
                         }
                     }
                 }
-         
+            }
+
         }
     }
 }
+
+#About_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width:320px) and (max-width:720px) {
+     flex-direction: column;    
+     justify-content: center;  
+  
+    }
+    &>div {
+        width: 50%;
+        height: 773px;
+        transition: .4s;
+        @media (min-width:320px) and (max-width:720px) {
+          width: 100%;
+         
+           }
+
+        @media (min-width:320px) and (max-width:1096px) {
+            height: 500px;
+        }
+     
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .Info_box1 {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: #fcfafa;
+    padding: 100px ;
+        gap: 20px;
+        @media (min-width:320px) and (max-width:1096px) {
+           padding: 50px;
+        }
+        h1 {
+            color: #000;
+            font-size: 28px;
+            line-height: 34px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 60%;
+            color: #707070;
+            font-size: 15px;
+            line-height: 25px;
+            font-style: normal;
+            font-weight: 400;
+            @media (min-width:320px) and (max-width:720px) {
+                width: 100%;
+               
+                 }
+        }
+
+        a {
+            color: #fff;
+            font-family: work sans, sans-serif;
+            font-size: 12px;
+            line-height: 46px;
+            height: 46px;
+            font-style: normal;
+            font-weight: 600;
+            background-color: #000;
+            text-transform: uppercase;
+            border-width: 1px;
+            padding-left: 52px;
+            padding-right: 52px;
+            text-decoration: none;
+            transition: .4s;
+            border: 1px solid transparent;
+            display: block;
+
+            &:hover {
+                background: transparent;
+                color: black;
+                border-color: #000;
+            }
+
+        }
+    }
+
+    .Info_box2 {
+        background-color: #000;
+        display: flex;
+        align-items: start;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 100px;
+        gap: 30px;
+        @media (min-width:320px) and (max-width:1096px) {
+            padding: 50px;
+         }
+        h1 {
+            color: white;
+            font-size: 28px;
+            line-height: 34px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+
+        }
+
+        p {
+            width: 60%;
+            font-size: 15px;
+            line-height: 25px;
+            font-style: normal;
+            font-weight: 400;
+            color: #ffffff;
+            @media (min-width:320px) and (max-width:720px) {
+                width: 100%;
+               
+                 }
+        }
+
+        a {
+            color: black;
+            font-family: work sans, sans-serif;
+            font-size: 12px;
+            line-height: 46px;
+            height: 46px;
+            font-style: normal;
+            font-weight: 600;
+            background-color: white;
+            text-transform: uppercase;
+            border-width: 1px;
+            padding-left: 52px;
+            padding-right: 52px;
+            text-decoration: none;
+            transition: .4s;
+            border: 1px solid transparent;
+            padding: 15px 52px 15px 52px;
+
+            &:hover {
+                background: transparent;
+                color: black;
+                border-color: #000;
+            }
+
+        }
+    }
+}
+
+
 
 
 #Product_mini_box {
@@ -862,12 +1043,12 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 4;
+
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-
+z-index: 20;
     @media (min-width:320px) and (max-width:1000px) {
         flex-direction: column;
         height: 90vh;

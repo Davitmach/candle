@@ -31,14 +31,14 @@ xhr.onload = () => {
             var Add_cart = document.querySelectorAll('#Add_cart_btn');
             for(cart of Add_cart) {
                 cart.addEventListener('click',(Event)=> {
-                    console.log(Event.target);
+                 
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', 'http://candle.ua/product/addCartFromLike.php', true);
                     xhr.onload = () => {
                         if (xhr.readyState === XMLHttpRequest.DONE) {
                             if (xhr.status === 200) {
                                 let data = xhr.response;
-                          console.log(data);
+                        
                             }
                         }
                     };
@@ -55,4 +55,4 @@ xhr.onload = () => {
 
 
 xhr.send();
-}, 200);
+ }, 200);

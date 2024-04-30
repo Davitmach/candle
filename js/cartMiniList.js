@@ -7,7 +7,14 @@ setInterval(() => {
             if (xhr.status === 200) {
                 let data = xhr.response;
 Cart_list.innerHTML = data;
+var Title2= Cart_list.querySelectorAll('#Title_box')
 
+for(e of Title2) {
+e.addEventListener('click',(Event)=> {
+    location.href = `./productPage.html?name=${Event.target.dataset.name}`
+   
+})
+}
 
             }
         }

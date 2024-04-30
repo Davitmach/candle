@@ -15,7 +15,7 @@ header {
   justify-content: space-evenly;
   background-color: white;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
 }
 @keyframes Header {
   from {
@@ -46,7 +46,7 @@ header .Menu_box {
     height: 0;
     width: 100%;
     position: absolute;
-    top: 120px;
+    top: 150px;
     background-color: white;
     left: 0;
     padding: 0 30px;
@@ -642,6 +642,13 @@ header #Menu_btn_box {
   flex-wrap: wrap;
   padding: 50px 100px;
 }
+@media (min-width: 320px) and (max-width: 560px) {
+  .Perfume_container .Perfumes {
+    padding: 50px 20px;
+    justify-content: center;
+    gap: 102px;
+  }
+}
 .Perfume_container .Perfumes .Perfume_box {
   width: 275px;
   height: auto;
@@ -735,6 +742,174 @@ header #Menu_btn_box {
   width: 30px;
   height: 30px;
 }
+.Perfume_container .Perfumes .Perfume_box .Img_container .Product_action .Liked {
+  animation: Liked 0.4s ease-in-out forwards;
+}
+@keyframes Liked {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#About_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  #About_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+#About_container > div {
+  width: 50%;
+  height: 773px;
+  transition: 0.4s;
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  #About_container > div {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 1096px) {
+  #About_container > div {
+    height: 500px;
+  }
+}
+#About_container > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#About_container .Info_box1 {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #fcfafa;
+  padding: 100px;
+  gap: 20px;
+}
+@media (min-width: 320px) and (max-width: 1096px) {
+  #About_container .Info_box1 {
+    padding: 50px;
+  }
+}
+#About_container .Info_box1 h1 {
+  color: #000;
+  font-size: 28px;
+  line-height: 34px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+#About_container .Info_box1 p {
+  width: 60%;
+  color: #707070;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  #About_container .Info_box1 p {
+    width: 100%;
+  }
+}
+#About_container .Info_box1 a {
+  color: #fff;
+  font-family: work sans, sans-serif;
+  font-size: 12px;
+  line-height: 46px;
+  height: 46px;
+  font-style: normal;
+  font-weight: 600;
+  background-color: #000;
+  text-transform: uppercase;
+  border-width: 1px;
+  padding-left: 52px;
+  padding-right: 52px;
+  text-decoration: none;
+  transition: 0.4s;
+  border: 1px solid transparent;
+  display: block;
+}
+#About_container .Info_box1 a:hover {
+  background: transparent;
+  color: black;
+  border-color: #000;
+}
+#About_container .Info_box2 {
+  background-color: #000;
+  display: flex;
+  align-items: start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 100px;
+  gap: 30px;
+}
+@media (min-width: 320px) and (max-width: 1096px) {
+  #About_container .Info_box2 {
+    padding: 50px;
+  }
+}
+#About_container .Info_box2 h1 {
+  color: white;
+  font-size: 28px;
+  line-height: 34px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+#About_container .Info_box2 p {
+  width: 60%;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  #About_container .Info_box2 p {
+    width: 100%;
+  }
+}
+#About_container .Info_box2 a {
+  color: black;
+  font-family: work sans, sans-serif;
+  font-size: 12px;
+  line-height: 46px;
+  height: 46px;
+  font-style: normal;
+  font-weight: 600;
+  background-color: white;
+  text-transform: uppercase;
+  border-width: 1px;
+  padding-left: 52px;
+  padding-right: 52px;
+  text-decoration: none;
+  transition: 0.4s;
+  border: 1px solid transparent;
+  padding: 15px 52px 15px 52px;
+}
+#About_container .Info_box2 a:hover {
+  background: transparent;
+  color: black;
+  border-color: #000;
+}
 
 #Product_mini_box {
   position: fixed;
@@ -742,11 +917,11 @@ header #Menu_btn_box {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 20;
 }
 @media (min-width: 320px) and (max-width: 1000px) {
   #Product_mini_box {

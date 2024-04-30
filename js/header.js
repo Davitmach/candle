@@ -27,6 +27,7 @@ window.addEventListener('scroll', () => {
         Like_box.style.visibility = 'hidden'
         Cart_box.style.visibility = 'hidden'
         Low_res_menu.style.top = '80px'
+        Menu.style.top = '80px';
     }
     else { Low_res_menu.style.top = '150px'
         Header.style.animation = ''
@@ -34,6 +35,7 @@ window.addEventListener('scroll', () => {
         Header.style.position = 'absolute'
         Like_box.style.visibility = 'visible'
         Cart_box.style.visibility = 'visible'
+        Menu.style.top = '150px';
     }
 
 })
