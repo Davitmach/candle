@@ -13,6 +13,29 @@
                 "background": "../assets/slider/slider3.jpg",
                 "title": "SCENT"
             }
+        ],
+        "Second_slider": [
+            {
+                "title":"GREAT SERVICE",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "img":"https://bridge492.qodeinteractive.com/wp-content/uploads/2021/05/user-img-03-1.jpg",
+                "name":"TERRY ORTEGA",
+                "profession":"Interior Designer"
+            },
+            {
+                "title":"FRESH VIEWS",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "img":"https://bridge492.qodeinteractive.com/wp-content/uploads/2021/05/user-img-02.jpg",
+                "name":"LOREN EVANS",
+                "profession":"Decorator"
+            },
+            {
+                "title":"AMAZING PAGE",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "img":"https://bridge492.qodeinteractive.com/wp-content/uploads/2023/09/user-img-01a.jpg",
+                "name":"ANNA GRAY",
+                "profession":"Architect" 
+            }
         ]
       
         

@@ -117,7 +117,7 @@
             }
         }
 
-        .Add_product {
+        .Add_product,.Add_blog {
             width: 100%;
             height: auto;
             display: flex;
@@ -189,7 +189,7 @@
         }
 
         .Products,
-        .Likes,.Add_cart {
+        .Likes,.Add_cart,.Messages,.Blogs {
             width: 100%;
             height: auto;
             display: flex;

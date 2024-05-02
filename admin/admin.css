@@ -100,7 +100,7 @@
 .Main_container .Admin_panel .Title_container h1 {
   color: #ffffff;
 }
-.Main_container .Admin_panel .Add_product {
+.Main_container .Admin_panel .Add_product, .Main_container .Admin_panel .Add_blog {
   width: 100%;
   height: auto;
   display: flex;
@@ -110,14 +110,14 @@
   gap: 20px;
   padding: 50px 0;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box {
+.Main_container .Admin_panel .Add_product .Inputs_box, .Main_container .Admin_panel .Add_blog .Inputs_box {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form {
+.Main_container .Admin_panel .Add_product .Inputs_box form, .Main_container .Admin_panel .Add_blog .Inputs_box form {
   width: 100%;
   height: auto;
   display: flex;
@@ -125,7 +125,7 @@
   justify-content: center;
   gap: 20px;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form input {
+.Main_container .Admin_panel .Add_product .Inputs_box form input, .Main_container .Admin_panel .Add_blog .Inputs_box form input {
   border-radius: 5px;
   outline: none;
   outline-width: 1px;
@@ -133,22 +133,22 @@
   transition: 0.4s;
   padding: 20px 10px;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form input::-moz-placeholder {
+.Main_container .Admin_panel .Add_product .Inputs_box form input::-moz-placeholder, .Main_container .Admin_panel .Add_blog .Inputs_box form input::-moz-placeholder {
   color: #624bff;
   font-weight: 500;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form input::placeholder {
+.Main_container .Admin_panel .Add_product .Inputs_box form input::placeholder, .Main_container .Admin_panel .Add_blog .Inputs_box form input::placeholder {
   color: #624bff;
   font-weight: 500;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form input:focus {
+.Main_container .Admin_panel .Add_product .Inputs_box form input:focus, .Main_container .Admin_panel .Add_blog .Inputs_box form input:focus {
   box-shadow: 0px 2px 9px #624bff;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form button {
+.Main_container .Admin_panel .Add_product .Inputs_box form button, .Main_container .Admin_panel .Add_blog .Inputs_box form button {
   border-radius: 5px;
   outline: none;
   outline-width: 1px;
@@ -161,13 +161,13 @@
   font-weight: 700;
   cursor: pointer;
 }
-.Main_container .Admin_panel .Add_product .Inputs_box form button:hover {
+.Main_container .Admin_panel .Add_product .Inputs_box form button:hover, .Main_container .Admin_panel .Add_blog .Inputs_box form button:hover {
   box-shadow: 0px 2px 9px #624bff;
   background-color: #ffffff;
   color: #624bff;
 }
 .Main_container .Admin_panel .Products,
-.Main_container .Admin_panel .Likes, .Main_container .Admin_panel .Add_cart {
+.Main_container .Admin_panel .Likes, .Main_container .Admin_panel .Add_cart, .Main_container .Admin_panel .Messages, .Main_container .Admin_panel .Blogs {
   width: 100%;
   height: auto;
   display: flex;
@@ -176,7 +176,7 @@
   padding: 10px 0;
 }
 .Main_container .Admin_panel .Products table,
-.Main_container .Admin_panel .Likes table, .Main_container .Admin_panel .Add_cart table {
+.Main_container .Admin_panel .Likes table, .Main_container .Admin_panel .Add_cart table, .Main_container .Admin_panel .Messages table, .Main_container .Admin_panel .Blogs table {
   width: auto;
   height: auto;
   display: flex;
@@ -184,13 +184,13 @@
   justify-content: center;
 }
 .Main_container .Admin_panel .Products table tbody,
-.Main_container .Admin_panel .Likes table tbody, .Main_container .Admin_panel .Add_cart table tbody {
+.Main_container .Admin_panel .Likes table tbody, .Main_container .Admin_panel .Add_cart table tbody, .Main_container .Admin_panel .Messages table tbody, .Main_container .Admin_panel .Blogs table tbody {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .Main_container .Admin_panel .Products table tbody tr,
-.Main_container .Admin_panel .Likes table tbody tr, .Main_container .Admin_panel .Add_cart table tbody tr {
+.Main_container .Admin_panel .Likes table tbody tr, .Main_container .Admin_panel .Add_cart table tbody tr, .Main_container .Admin_panel .Messages table tbody tr, .Main_container .Admin_panel .Blogs table tbody tr {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -198,7 +198,7 @@
   padding: 30px 0;
 }
 .Main_container .Admin_panel .Products table tbody tr td,
-.Main_container .Admin_panel .Likes table tbody tr td, .Main_container .Admin_panel .Add_cart table tbody tr td {
+.Main_container .Admin_panel .Likes table tbody tr td, .Main_container .Admin_panel .Add_cart table tbody tr td, .Main_container .Admin_panel .Messages table tbody tr td, .Main_container .Admin_panel .Blogs table tbody tr td {
   width: 130px;
   height: 130px;
   display: flex;
@@ -212,7 +212,7 @@
   gap: 20px;
 }
 .Main_container .Admin_panel .Products table tbody tr td button,
-.Main_container .Admin_panel .Likes table tbody tr td button, .Main_container .Admin_panel .Add_cart table tbody tr td button {
+.Main_container .Admin_panel .Likes table tbody tr td button, .Main_container .Admin_panel .Add_cart table tbody tr td button, .Main_container .Admin_panel .Messages table tbody tr td button, .Main_container .Admin_panel .Blogs table tbody tr td button {
   background: none;
   border: 3px solid #624bff;
   border-radius: 5px;
@@ -225,7 +225,7 @@
   transition: 0.4s;
 }
 .Main_container .Admin_panel .Products table tbody tr img,
-.Main_container .Admin_panel .Likes table tbody tr img, .Main_container .Admin_panel .Add_cart table tbody tr img {
+.Main_container .Admin_panel .Likes table tbody tr img, .Main_container .Admin_panel .Add_cart table tbody tr img, .Main_container .Admin_panel .Messages table tbody tr img, .Main_container .Admin_panel .Blogs table tbody tr img {
   width: 100%;
   height: 100%;
   border-radius: 5px;

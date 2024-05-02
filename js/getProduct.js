@@ -230,7 +230,14 @@ xhr8.onload = () => {
                                 Price.innerHTML = data.price + '$';
                                 Like_container.classList.add('Like_container');
                                 Info_box.append(Like_container);
-                                Like_box.innerHTML = '<i class="fa-regular fa-heart"></i>';
+                             
+      if(data.liked =='true') {
+        Like_box.innerHTML = '<i class="fa-solid fa-heart"></i>'
+      }
+      else {
+        Like_box.innerHTML = '<i class="fa-regular fa-heart"></i>'
+      }
+                                
                                 Like_box.style.fontSize = '20px';
                                 Like_box.style.cursor = 'pointer';
 
@@ -243,7 +250,12 @@ xhr8.onload = () => {
                                         if (xhr2.readyState === XMLHttpRequest.DONE) {
                                             if (xhr2.status === 200) {
                                                 let data = xhr2.response;
-                                      
+                                    if(data == 'liked') {
+                                        Like_box.innerHTML = '<i class="fa-regular fa-heart"></i>'
+                                    }
+                                    else {
+                                        Like_box.innerHTML = '<i class="fa-solid fa-heart"></i>'
+                                    }
                                             }
                                         }
                                     };
@@ -252,6 +264,9 @@ xhr8.onload = () => {
                                     xhr2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                     xhr2.send("id=" + Event.target.dataset.id);
                                 })
+
+                               
+                               
                                 Like_container.append(Like_box);
                                 var Counter_action = document.createElement('div');
                                 Counter_action.classList.add('Counter_action');
