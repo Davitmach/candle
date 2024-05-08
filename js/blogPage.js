@@ -8,10 +8,14 @@ xhr.onload = () => {
         if (xhr.status === 200) {
             let data = xhr.response;
      Container.innerHTML = data;
+
+   
         }
     }
 };
 
 
+
+
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhr.send("id="+urlParams.get('id')); 
+xhr.send("id=" + urlParams.get('id'));

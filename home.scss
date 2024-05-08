@@ -1266,6 +1266,7 @@ header {
         justify-content: center;
         flex-direction: column;
         gap: 10px;
+       
 
         h1 {
             color: #000000;
@@ -1381,7 +1382,7 @@ header {
                     font-style: normal;
                     font-weight: 600;
                     letter-spacing: 4.4px;
-                    text-transform: uppercase;
+                    text-transform: uppercase; cursor: pointer;
                 }
 
                 p {

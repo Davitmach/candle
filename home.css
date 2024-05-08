@@ -1235,6 +1235,7 @@ header #Menu_btn_box {
   font-weight: 600;
   letter-spacing: 4.4px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 #Blog_container #Blogs > div .Info_box p {
   width: 100%;

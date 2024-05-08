@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BlogPage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
-    <header id="#Slide" >
+
+    <header id="#Slide">
         <div class="Menu_box" id="Menu">
             <ul>
                 <li><a href="../../home.html" id="Home">HOME</a></li>
@@ -64,11 +66,31 @@
         </div>
         <div id="Menu_btn_box"></div>
     </header>
-    
-<div id="Blog_container">
-    
-</div>
 
+    <div id="Blog_container">
+
+    </div>
+
+
+    <div class="Message_box">
+        <div class="Title_box">
+            <h1>POST A COMMENT</h1>
+        </div>
+        <div class="Form_box">
+            <form id="Form">
+                <div class="Textarea_box"><textarea name="message" placeholder="Write your comment here..."></textarea>
+                </div>
+                <div class="Inputs">
+                    <div><input type="text" placeholder="Your full name" name="name"></div>
+                    <div><input type="email" placeholder="E-mail address" name="email"></div>
+                    <div><input type="text" placeholder="Website" name="website"></div>
+                </div>
+              
+                <div id="Submit_box"><button>SUBMIT</button></div>
+            </form>
+        </div>
+    </div>
+    <div id="Checkmark_box"></div>
 
 
     <footer>
@@ -146,5 +168,8 @@
     <script src="../../js/scrollUp.js"></script>
     <script src="../../jquery-3.7.1.min.js"></script>
     <script src="../../js/blogPage.js"></script>
+    <script src="../../js/blogMessage.js"></script>
+
 </body>
+
 </html>
