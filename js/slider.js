@@ -101,11 +101,13 @@ var Pagination_data = [];
       var Button_box = document.createElement('div');
       Button_box.classList.add('Button_box');
       Info_box.append(Button_box);
-      var Btn1 = document.createElement('button');
+      var Btn1 = document.createElement('a');
+      Btn1.href = './pages/shop/shop.html'
       Btn1.classList.add('Btn1');
       Btn1.innerText = 'VIEW MORE';
       Button_box.append(Btn1);
-      var Btn2 = document.createElement('button');
+      var Btn2 = document.createElement('a');
+      Btn2.href = './pages/shop/shop.html'
       Btn2.classList.add('Btn2');
       Btn2.innerText = 'SHOP NOW';
       Button_box.append(Btn2);

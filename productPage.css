@@ -147,6 +147,7 @@ header .Menu_box ul li {
     display: flex;
     padding: 0;
     transition: 0.4s;
+    z-index: 90;
   }
 }
 @media (min-width: 1024px) {
@@ -163,6 +164,7 @@ header .Menu_box ul li {
     padding: 20px;
     background-color: black;
     transition: 0.4s;
+    z-index: 90;
   }
 }
 header .Menu_box ul li ul a {

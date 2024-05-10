@@ -376,11 +376,11 @@ header #Menu_btn_box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 50px;
+  padding: 50px 0;
 }
 @media (min-width: 320px) and (max-width: 1707px) {
   #Liked_container {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
 }
 #Liked_container table {
@@ -397,12 +397,10 @@ header #Menu_btn_box {
   flex-direction: column;
   gap: 30px;
 }
-@media (min-width: 320px) and (max-width: 416px) {
+@media (min-width: 320px) and (max-width: 452px) {
   #Liked_container table tbody {
-    flex-direction: row;
-    height: 100vh;
     width: 100%;
-    overflow-x: scroll;
+    padding: 0 10px;
   }
 }
 #Liked_container table tbody > tr:first-child {
@@ -412,27 +410,14 @@ header #Menu_btn_box {
   display: flex;
   align-items: center;
 }
-@media (min-width: 320px) and (max-width: 416px) {
-  #Liked_container table tbody > tr:first-child {
-    height: 100vh;
-    justify-content: space-evenly;
-  }
-}
 #Liked_container table tbody tr {
   width: 100%;
   height: auto;
   display: flex;
   border: 1px solid #e0dede;
 }
-@media (min-width: 320px) and (max-width: 416px) {
-  #Liked_container table tbody tr {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 #Liked_container table tbody tr td {
-  width: 500px;
+  width: 450px;
   height: 100px;
   display: flex;
   align-items: center;
@@ -441,7 +426,7 @@ header #Menu_btn_box {
   transition: 0.4s;
   flex-wrap: wrap;
 }
-@media (min-width: 320px) and (max-width: 1639px) {
+@media (min-width: 320px) and (max-width: 1818px) {
   #Liked_container table tbody tr td {
     width: 300px;
     height: auto;
@@ -463,6 +448,11 @@ header #Menu_btn_box {
     width: 100px;
   }
 }
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td {
+    width: 70px;
+  }
+}
 #Liked_container table tbody tr td h3 {
   font-family: "Work sans", sans-serif;
   text-transform: uppercase;
@@ -479,6 +469,11 @@ header #Menu_btn_box {
 @media (min-width: 320px) and (max-width: 413px) {
   #Liked_container table tbody tr td h3 {
     font-size: 18px;
+  }
+}
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td h3 {
+    font-size: 8px;
   }
 }
 #Liked_container table tbody tr td #Open_mini_product_btn {
@@ -506,12 +501,22 @@ header #Menu_btn_box {
     transform: scale(0.8);
   }
 }
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td #Open_mini_product_btn {
+    transform: scale(0.5);
+  }
+}
 #Liked_container table tbody tr td h2 {
   font-family: "Work sans", sans-serif;
   text-transform: uppercase;
   color: #000;
   font-size: 15px;
   font-weight: 400;
+}
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td h2 {
+    font-size: 10px;
+  }
 }
 #Liked_container table tbody tr td div {
   width: 100px;
@@ -525,6 +530,12 @@ header #Menu_btn_box {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td img {
+    width: 40px;
+    height: 60px;
+  }
+}
 #Liked_container table tbody tr td h1 {
   color: #888;
   font-size: 14px;
@@ -534,6 +545,11 @@ header #Menu_btn_box {
 @media (min-width: 320px) and (max-width: 770px) {
   #Liked_container table tbody tr td h1 {
     text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td h1 {
+    font-size: 10px;
   }
 }
 #Liked_container table tbody tr td #Add_cart_btn {
@@ -564,6 +580,13 @@ header #Menu_btn_box {
     padding: 0;
     font-size: 10px;
     letter-spacing: 1px;
+  }
+}
+@media (min-width: 320px) and (max-width: 432px) {
+  #Liked_container table tbody tr td #Add_cart_btn {
+    font-size: 7px;
+    white-space: nowrap;
+    padding: 0 10px;
   }
 }
 #Liked_container table tbody tr td i {

@@ -1,6 +1,6 @@
 var Blog_container = document.getElementById('Blogs');
 
-// setInterval(() => {
+setInterval(() => {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://candle.ua/blog/getBlog.php', true);
     xhr.onload = () => {
@@ -33,4 +33,4 @@ for(b of Btn) {
 
 
     xhr.send();
-// }, 200);
+}, 200);

@@ -1,12 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="Menu_box" id="Menu">
+            <ul>
+                <li><a href="../../home.html" id="Home">HOME</a></li>
+                <li><a href="">PAGES</a>
+                    <ul id="Low_res_menu">
+                        <li><a href="../../pages/about/about.html">About Us</a></li>
+                        <li><a href="../../pages/faq/faq.html">FAQ Page</a></li>
+                        <li><a href="../../pages/contact/contact.html">Contact Us</a></li>
+                    </ul>
+                    <div id="Low_res_btn"><i class="fa-solid fa-angle-right"></i></div>
+                </li>
+                <li><a href=""id="Shop">SHOP</a></li>
+
+                <li><a href="../../pages/blog/blog.html">BLOG</a></li>
+            </ul>
+        </div>
+        <div class="Logo_box"><img src="../../assets/logo/492-Bridge-logo.png" alt=""></div>
+        <div class="User_info_container">
+            <div id="Like" class="Like_box">
+                <div><a href="../../likePage.html"><i class="fa-regular fa-heart"></i></a></div>
+                <div id="Like_counter">( 0 )</div>
+            </div>
+            <div id="Cart" class="Cart_box">
+                <div><a href="../../cartPage.html"><svg xmlns='http://www.w3.org/2000/svg'
+                            xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16.6px' height='17.304px'
+                            viewBox='5.874 3.82 16.6 17.304' enable-background='new 5.874 3.82 16.6 17.304'
+                            xml:space='preserve' style=' stroke: currentColor; fill: none;
+            '>
+                            <polygon stroke-miterlimit='10'
+                                points='7.791,8.559 20.789,8.559 21.789,20.559 6.791,20.559 '></polygon>
+                            <path stroke-miterlimit='10'
+                                d='M10.791,11.059V7.601c0,0,0.084-3.042,3.542-3.042 c3.457,0,3.457,3.042,3.457,3.042v3.458'>
+                            </path>
+                            <rect x='9.291' y='11.059' width='3' height='2'></rect>
+                            <rect x='16.289' y='11.059' width='3' height='2'></rect>
+                        </svg></a></div>
+                <div id="Cart_counter">( 0 )</div>
+
+                <div id="Cart_items_box">
+                    <div id="Product_list"><span>NO PRODUCTS IN THE CART.</span></div>
+                    <div id="Total_money">
+                        <div>
+                            <h1>TOTAL:</h1>
+                        </div>
+                        <div><span id="Total_money_box"></span></div>
+                    </div>
+                    <div class="Button_box"><a href="../../cartPage.html">CART</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="Menu_btn_box"></div>
+    </header>
+<div class="Main_banner_box">
+
+</div>
+
+<div id="Main_container">
+    <div class="Shop_container">
+
+            <div id="Sort_product">
+                <div id="Title_box_menu"><h1></h1> <div><i class="fa-solid fa-angle-down" id="Open_menu"></i></div></div>
+               
+                <ul id="Sort_menu">
+                    <li id="Default">Default sorting</li>
+                    <li id="LowHigh">Sort by price: low to high</li>
+                    <li id="HighLow">Sort by price: high to low</li>
+                </ul>
+            </div>
+           
+ 
+        <div id="Shop_container"></div>
+        <div id="Pagination_container"></div>
+        <div id="Navigation_container">
+            <div id="Prev"><i class="fa-solid fa-angle-left"></i></div>
+            <div id="Next"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+    </div>
+    <div class="Right_bar">
+        <div id="Filter_price">
+            <div class="Title_box"><h1>FILTER BY PRICE</h1></div>
+            <div id="Filter_box">
+                <div class="Slider_track"></div>
+                <input id="Input1" type="range" min="1" max="80" value="1">
+                <input id="Input2" type="range" min="1" max="80" value="80">
+            </div>
+            <div class="Price_info">
+                <div id="Price">
+                    <div id="Value1"><h1></h1></div>
+                    <div id="Value2"><h1></h1></div>
+                </div>
+                <div class="Btn_box">
+                <div id="Reset_btn"><button>RESET</button></div>
+                <div id="Apply_btn"><button>APPLY</button></div>
+            </div>
+            </div>
+        </div>
+       
+        <div id="Search_box">
+            <div class="Title_box"><h1>SEARCH</h1></div>
+            <div class="Input_box">
+                <input type="text" placeholder="Search" id="Search_input">
+                <i id="Search_btn" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div id="Instagram_box">
+            <div class="Title_box"><h1>INSTAGRAM</h1></div>
+            <div class="Instagram_box">
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-01.jpg" alt=""></a>
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-02.jpg" alt=""></a>
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-03.jpg" alt=""></a>
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-04.jpg" alt=""></a>
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-05.jpg" alt=""></a>
+                <a href="https://www.instagram.com/qodeinteractive/"><img src="../../assets/slide/insta-img-06.jpg" alt=""></a>
+            </div>
+        </div>
+        <div id="Message_box">
+            <div class="Title_box"><h1>NEWSLETTER</h1></div>
+            <div class="Input_box">
+                <input placeholder="Get Newslatter..." type="text" id="Message">
+                <div id="Send_btn"><button>SEND</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <footer>
+        <div class="Footer_box">
+            <div>
+                <div>
+                    <h1>Contact</h1>
+                </div>
+                <div><span>A: Seestrasse 21, Zurich, CH</span></div>
+                <div><span>T: +417 17 4178 88</span></div>
+                <div><span>bridge@qodeinteractive.com</span></div>
+                <div><span>
+                        IG _bridgecandleshop</span></div>
+
+            </div>
+            <div>
+                <div>
+                    <h1>SERVICES</h1>
+                </div>
+                <div><span>Exclusive offers</span></div>
+                <div><span>Gifts</span></div>
+                <div><span>Store location</span></div>
+                <div><span>Corporate sales</span></div>
+
+            </div>
+            <div>
+                <div>
+                    <h1>ORDERS</h1>
+                </div>
+                <div><span>My account</span></div>
+                <div><span>Delivery informatioт</span></div>
+                <div><span>Track my order</span></div>
+                <div><span>Help</span></div>
+
+            </div>
+            <div>
+                <div>
+                    <h1>MOST POPULAR</h1>
+                </div>
+                <div><span>Bergamot Collection</span></div>
+                <div><span>Hulie divine</span></div>
+                <div><span>La note de Paris</span></div>
+                <div><span>Pachouli Home</span></div>
+            </div>
+        </div>
+        <div class="About_box">
+            <div class="Info_box">
+                <div><span>Terms of Use</span></div>
+                <div><span>Privacy</span></div>
+            </div>
+            <div class="Bank_list">
+                <img src="../../assets/icon/payment-01.png" alt="">
+            </div>
+            <div class="Footer_title">
+                <div><span>© 2024</span></div>
+                <div><span>Qode Interactive</span></div>
+                <div><span>, All Rights Reserved</span></div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div id="Scroll_up"><a href="#Slide"><i class="fa-solid fa-arrow-up"></i></a></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+        integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <script src="../../js/header.js"></script>
+    <script src="../../js/likeCounter.js"></script>
+    <script src="../../js/cartCounter.js"></script>
+    <script src="../../js/cartMiniList.js"></script>
+    <script src="../../js/totalMoneyCart.js"></script>
+    <script src="../../js/scrollUp.js"></script>
+    <script src="../../js/getShopProduct.js"></script>
+   <script src="../../js/shopSort.js"></script>
+   <script src="../../js/filterPrice.js"></script>
+   <script src="../../js/searchProduct.js"></script>
+   <script src="../../js/messageFromShop.js"></script>
+   
 </body>
+
 </html>
